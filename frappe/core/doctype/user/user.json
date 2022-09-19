@@ -22,6 +22,7 @@
   "send_welcome_email",
   "unsubscribed",
   "user_image",
+  "program",
   "sb1",
   "role_profile_name",
   "roles_html",
@@ -606,6 +607,12 @@
    "fieldtype": "Link",
    "label": "Module Profile",
    "options": "Module Profile"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "Program"
   }
  ],
  "icon": "fa fa-user",
@@ -668,7 +675,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2022-03-09 01:47:56.745069",
+ "modified": "2022-09-19 13:39:51.520074",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
@@ -701,7 +708,6 @@
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
  "title_field": "full_name",
  "track_changes": 1
 }
