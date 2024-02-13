@@ -48,14 +48,14 @@
    "label": "Enabled"
   }
  ],
+ "hide_toolbar": 1,
  "icon": "fa fa-globe",
  "in_create": 1,
  "links": [],
- "modified": "2021-10-18 14:02:06.818219",
+ "modified": "2023-08-18 20:53:31.357679",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "Language",
- "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

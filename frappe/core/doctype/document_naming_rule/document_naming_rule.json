@@ -78,9 +78,10 @@
    "label": "Priority"
   }
  ],
+ "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-13 20:07:47.617615",
+ "modified": "2023-08-18 20:53:36.491296",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "Document Naming Rule",

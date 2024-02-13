@@ -1,5 +1,9 @@
 frappe.listview_settings["Email Account"] = {
 	add_fields: ["default_incoming", "default_outgoing", "enable_incoming", "enable_outgoing"],
+	// Additional filters (array or object) to customize query
+	filters: [
+		['owner','!=','Administrator'] 
+	],
 	get_indicator: function(doc) {
 		if(doc.default_incoming && doc.default_outgoing) {
 			var color = (doc.enable_incoming && doc.enable_outgoing) ? "blue" : "gray";
@@ -15,9 +19,10 @@ frappe.listview_settings["Email Account"] = {
 		}
 		else {
 			color = doc.enable_incoming ? "blue" : "gray";
-			return [__("Inbox"), color, "is_global,=,No|is_default=No"];
+			return [__("Inbox"), color, "is_global,=,No|is_default,=,No"];
 		}
-	}
+	},
+	
 }
 
 frappe.help.youtube_id["Email Account"] = "YFYe0DrB95o";

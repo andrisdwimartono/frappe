@@ -71,6 +71,7 @@
   },
   {
    "default": "https://s3.amazonaws.com",
+   "description": "Only change this if you want to use other S3 compatible object storage backends.",
    "fieldname": "endpoint_url",
    "fieldtype": "Data",
    "label": "Endpoint URL"
@@ -129,7 +130,7 @@
  "hide_toolbar": 1,
  "issingle": 1,
  "links": [],
- "modified": "2020-12-07 15:30:55.047689",
+ "modified": "2023-08-18 20:52:46.801059",
  "modified_by": "Administrator",
  "module": "Integrations",
  "name": "S3 Backup Settings",

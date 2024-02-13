@@ -48,9 +48,10 @@
    "unique": 1
   }
  ],
+ "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-05-26 19:36:59.093753",
+ "modified": "2023-08-18 20:53:49.783785",
  "modified_by": "Administrator",
  "module": "Desk",
  "name": "Form Tour",

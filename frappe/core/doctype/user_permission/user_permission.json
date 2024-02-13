@@ -2,6 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "creation": "2017-07-17 14:25:27.881871",
+ "disabled": 1,
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -89,8 +90,9 @@
    "fieldtype": "Column Break"
   }
  ],
+ "hide_toolbar": 1,
  "links": [],
- "modified": "2022-01-03 11:25:03.726150",
+ "modified": "2024-02-01 18:32:33.051546",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User Permission",
@@ -111,7 +113,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
  "title_field": "user",
  "track_changes": 1
 }

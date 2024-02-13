@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "WEBHOOK-REQ-.#####",
+ "autoname": "hash",
  "creation": "2021-05-24 21:35:59.104776",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -53,10 +53,11 @@
    "read_only": 1
   }
  ],
+ "hide_toolbar": 1,
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-05-26 23:57:58.495261",
+ "modified": "2023-08-18 20:53:07.398732",
  "modified_by": "Administrator",
  "module": "Integrations",
  "name": "Webhook Request Log",

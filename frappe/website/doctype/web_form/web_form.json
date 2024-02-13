@@ -365,10 +365,11 @@
   }
  ],
  "has_web_view": 1,
+ "hide_toolbar": 1,
  "icon": "icon-edit",
  "is_published_field": "published",
  "links": [],
- "modified": "2021-11-15 14:12:44.624573",
+ "modified": "2023-08-18 20:53:27.594245",
  "modified_by": "Administrator",
  "module": "Website",
  "name": "Web Form",

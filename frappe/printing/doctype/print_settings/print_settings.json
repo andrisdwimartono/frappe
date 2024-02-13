@@ -172,11 +172,12 @@
    "label": "PDF Page Width (in mm)"
   }
  ],
+ "hide_toolbar": 1,
  "icon": "fa fa-cog",
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2021-09-17 12:59:14.783694",
+ "modified": "2023-08-18 20:53:35.547929",
  "modified_by": "Administrator",
  "module": "Printing",
  "name": "Print Settings",

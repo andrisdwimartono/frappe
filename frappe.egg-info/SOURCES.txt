@@ -1,5 +1,6 @@
 LICENSE
 README.md
+pyproject.toml
 setup.py
 frappe/__init__.py
 frappe/api.py
@@ -159,6 +160,8 @@ frappe/core/doctype/document_naming_rule/test_document_naming_rule.py
 frappe/core/doctype/document_naming_rule_condition/__init__.py
 frappe/core/doctype/document_naming_rule_condition/document_naming_rule_condition.py
 frappe/core/doctype/document_naming_rule_condition/test_document_naming_rule_condition.py
+frappe/core/doctype/document_share_key/__init__.py
+frappe/core/doctype/document_share_key/document_share_key.py
 frappe/core/doctype/domain/__init__.py
 frappe/core/doctype/domain/domain.py
 frappe/core/doctype/domain/test_domain.py
@@ -309,6 +312,9 @@ frappe/core/page/permission_manager/__init__.py
 frappe/core/page/permission_manager/permission_manager.py
 frappe/core/page/recorder/__init__.py
 frappe/core/report/__init__.py
+frappe/core/report/database_storage_usage_by_tables/__init__.py
+frappe/core/report/database_storage_usage_by_tables/database_storage_usage_by_tables.py
+frappe/core/report/database_storage_usage_by_tables/test_database_storage_usage_by_tables.py
 frappe/core/report/document_share_report/__init__.py
 frappe/core/report/permitted_documents_for_user/__init__.py
 frappe/core/report/permitted_documents_for_user/permitted_documents_for_user.py
@@ -762,7 +768,6 @@ frappe/patches/v11_0/set_default_letter_head_source.py
 frappe/patches/v11_0/set_dropbox_file_backup.py
 frappe/patches/v11_0/set_missing_creation_and_modified_value_for_user_permissions.py
 frappe/patches/v11_0/sync_stripe_settings_before_migrate.py
-frappe/patches/v11_0/sync_user_permission_doctype_before_migrate.py
 frappe/patches/v11_0/update_list_user_settings.py
 frappe/patches/v12_0/__init__.py
 frappe/patches/v12_0/change_existing_dashboard_chart_filters.py
@@ -809,15 +814,18 @@ frappe/patches/v13_0/delete_event_producer_and_consumer_keys.py
 frappe/patches/v13_0/delete_package_publish_tool.py
 frappe/patches/v13_0/email_unsubscribe.py
 frappe/patches/v13_0/enable_custom_script.py
+frappe/patches/v13_0/encrypt_2fa_secrets.py
 frappe/patches/v13_0/generate_theme_files_in_public_folder.py
 frappe/patches/v13_0/increase_password_length.py
 frappe/patches/v13_0/make_user_type.py
 frappe/patches/v13_0/migrate_translation_column_data.py
+frappe/patches/v13_0/payment_gateways_deprecation_warning.py
 frappe/patches/v13_0/queryreport_columns.py
 frappe/patches/v13_0/remove_chat.py
 frappe/patches/v13_0/remove_custom_link.py
 frappe/patches/v13_0/remove_duplicate_navbar_items.py
 frappe/patches/v13_0/remove_invalid_options_for_data_fields.py
+frappe/patches/v13_0/remove_share_for_std_users.py
 frappe/patches/v13_0/remove_tailwind_from_page_builder.py
 frappe/patches/v13_0/remove_twilio_settings.py
 frappe/patches/v13_0/remove_web_view.py
@@ -829,12 +837,15 @@ frappe/patches/v13_0/rename_notification_fields.py
 frappe/patches/v13_0/rename_onboarding.py
 frappe/patches/v13_0/replace_field_target_with_open_in_new_tab.py
 frappe/patches/v13_0/replace_old_data_import.py
+frappe/patches/v13_0/reset_corrupt_defaults.py
+frappe/patches/v13_0/set_document_expiry_default.py
 frappe/patches/v13_0/set_existing_dashboard_charts_as_public.py
 frappe/patches/v13_0/set_first_day_of_the_week.py
 frappe/patches/v13_0/set_path_for_homepage_in_web_page_view.py
 frappe/patches/v13_0/set_read_times.py
 frappe/patches/v13_0/set_route_for_blog_category.py
 frappe/patches/v13_0/set_social_icons.py
+frappe/patches/v13_0/set_suspend_email_queue_default.py
 frappe/patches/v13_0/set_unique_for_page_view.py
 frappe/patches/v13_0/site_wise_logging.py
 frappe/patches/v13_0/update_date_filters_in_user_settings.py
@@ -943,6 +954,7 @@ frappe/tests/test_global_search.py
 frappe/tests/test_goal.py
 frappe/tests/test_hooks.py
 frappe/tests/test_listview.py
+frappe/tests/test_model_utils.py
 frappe/tests/test_monitor.py
 frappe/tests/test_naming.py
 frappe/tests/test_oauth20.py
@@ -1012,6 +1024,7 @@ frappe/utils/reset_doc.py
 frappe/utils/response.py
 frappe/utils/safe_exec.py
 frappe/utils/scheduler.py
+frappe/utils/synchronization.py
 frappe/utils/testutils.py
 frappe/utils/user.py
 frappe/utils/verified_command.py
@@ -1199,3 +1212,4 @@ frappe/www/update_password.py
 frappe/www/website_script.py
 frappe/www/_test/__init__.py
 frappe/www/_test/_test_webform.py
+frappe/www/_test/assets/__init__.py

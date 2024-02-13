@@ -10,11 +10,11 @@
   "role_name",
   "home_page",
   "restrict_to_domain",
-  "column_break_4",
   "disabled",
   "is_custom",
   "desk_access",
   "two_factor_auth",
+  "column_break_4",
   "navigation_settings_section",
   "search_bar",
   "notifications",
@@ -48,7 +48,6 @@
    "default": "1",
    "fieldname": "desk_access",
    "fieldtype": "Check",
-   "in_list_view": 1,
    "label": "Desk Access"
   },
   {
@@ -67,6 +66,7 @@
    "description": "Route: Example \"/desk\"",
    "fieldname": "home_page",
    "fieldtype": "Data",
+   "ignore_user_permissions": 1,
    "label": "Home Page"
   },
   {
@@ -76,7 +76,8 @@
   {
    "fieldname": "navigation_settings_section",
    "fieldtype": "Section Break",
-   "label": "Navigation Settings"
+   "label": "Navigation Settings",
+   "permlevel": 5
   },
   {
    "default": "1",
@@ -87,7 +88,8 @@
   {
    "fieldname": "list_settings_section",
    "fieldtype": "Section Break",
-   "label": "List Settings"
+   "label": "List Settings",
+   "permlevel": 5
   },
   {
    "default": "1",
@@ -104,7 +106,8 @@
   {
    "fieldname": "form_settings_section",
    "fieldtype": "Section Break",
-   "label": "Form Settings"
+   "label": "Form Settings",
+   "permlevel": 5
   },
   {
    "default": "1",
@@ -144,30 +147,29 @@
    "label": "Is Custom"
   }
  ],
+ "hide_toolbar": 1,
  "icon": "fa fa-bookmark",
  "idx": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-12 20:18:18.496230",
+ "modified": "2024-02-03 14:33:27.991668",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "Role",
  "owner": "Administrator",
  "permissions": [
   {
-   "create": 1,
-   "delete": 1,
    "email": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
+   "share": 1
   }
  ],
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "ASC",
- "track_changes": 1
+ "track_changes": 1,
+ "translated_doctype": 1
 }

@@ -7,7 +7,7 @@ frappe.ui.form.SuccessAction = class SuccessAction {
 		this.load_setting();
 	}
 
-	load_setting() {
+	load_setting() { 
 		this.setting = frappe.boot.success_action
 			.find(setting => setting.ref_doctype === this.form.doctype);
 	}

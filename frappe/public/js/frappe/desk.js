@@ -128,17 +128,6 @@ frappe.Application = Class.extend({
 		this.link_preview = new frappe.ui.LinkPreview();
 
 		if (!frappe.boot.developer_mode) {
-			setInterval(function() {
-				frappe.call({
-					method: 'frappe.core.page.background_jobs.background_jobs.get_scheduler_status',
-					callback: function(r) {
-						if (r.message[0] == __("Inactive")) {
-							frappe.call('frappe.utils.scheduler.activate_scheduler');
-						}
-					}
-				});
-			}, 300000); // check every 5 minutes
-
 			if (frappe.user.has_role("System Manager")) {
 				setInterval(function() {
 					frappe.call({
@@ -161,7 +150,6 @@ frappe.Application = Class.extend({
 	},
 
 	set_route() {
-		frappe.flags.setting_original_route = true;
 		if (frappe.boot && localStorage.getItem("session_last_route")) {
 			frappe.set_route(localStorage.getItem("session_last_route"));
 			localStorage.removeItem("session_last_route");
@@ -169,7 +157,6 @@ frappe.Application = Class.extend({
 			// route to home page
 			frappe.router.route();
 		}
-		frappe.after_ajax(() => frappe.flags.setting_original_route = false);
 		frappe.router.on('change', () => {
 			$(".tooltip").hide();
 		});
@@ -497,7 +484,8 @@ frappe.Application = Class.extend({
 		// 	"version": "12.2.0"
 		// }];
 
-		if (!Array.isArray(change_log) || !change_log.length || window.Cypress) {
+		if (!Array.isArray(change_log) || !change_log.length ||
+			window.Cypress || cint(frappe.boot.sysdefaults.disable_change_log_notification)) {
 			return;
 		}
 

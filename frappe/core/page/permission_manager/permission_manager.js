@@ -55,9 +55,12 @@ frappe.PermissionEngine = class PermissionEngine {
 					this.refresh();
 				});
 
-		this.page.add_inner_button(__('Set User Permissions'), () => {
-			return frappe.set_route('List', 'User Permission');
-		});
+		if(frappe.session.user == 'Administrator'){
+			this.page.add_inner_button(__('Set User Permissions'), () => {
+				return frappe.set_route('List', 'User Permission');
+			});
+		}
+
 		this.set_from_route();
 	}
 

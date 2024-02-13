@@ -413,11 +413,12 @@
    "label": "Non Negative"
   }
  ],
+ "hide_toolbar": 1,
  "icon": "fa fa-glass",
  "idx": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-07-12 05:54:13.042319",
+ "modified": "2023-08-18 20:53:44.314085",
  "modified_by": "Administrator",
  "module": "Custom",
  "name": "Custom Field",

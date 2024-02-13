@@ -74,9 +74,10 @@
    "label": "Google Drive Picker Enabled"
   }
  ],
+ "hide_toolbar": 1,
  "issingle": 1,
  "links": [],
- "modified": "2021-06-29 18:26:07.094851",
+ "modified": "2023-08-18 20:53:45.684838",
  "modified_by": "Administrator",
  "module": "Integrations",
  "name": "Google Settings",

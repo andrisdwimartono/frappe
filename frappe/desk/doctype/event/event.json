@@ -274,14 +274,14 @@
    "read_only": 1
   }
  ],
+ "hide_toolbar": 1,
  "icon": "fa fa-calendar",
  "idx": 1,
  "links": [],
- "modified": "2021-11-18 05:06:24.881742",
+ "modified": "2023-08-18 20:53:26.569742",
  "modified_by": "Administrator",
  "module": "Desk",
  "name": "Event",
- "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

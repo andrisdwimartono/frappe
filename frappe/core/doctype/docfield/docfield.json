@@ -32,6 +32,7 @@
   "default",
   "fetch_from",
   "fetch_if_empty",
+  "description",
   "permissions",
   "depends_on",
   "hidden",
@@ -60,7 +61,6 @@
   "width",
   "columns",
   "column_break_22",
-  "description",
   "oldfieldname",
   "oldfieldtype"
  ],
@@ -338,7 +338,7 @@
   },
   {
    "default": "0",
-   "description": "Don't HTML Encode HTML tags like &lt;script&gt; or just characters like &lt; or &gt;, as they could be intentionally used in this field",
+   "description": "Don't encode HTML tags like &lt;script&gt; or just characters like &lt; or &gt;, as they could be intentionally used in this field",
    "fieldname": "ignore_xss_filter",
    "fieldtype": "Check",
    "label": "Ignore XSS Filter"
@@ -412,7 +412,6 @@
   {
    "fieldname": "description",
    "fieldtype": "Small Text",
-   "in_list_view": 1,
    "label": "Description",
    "oldfieldname": "description",
    "oldfieldtype": "Text",
@@ -483,11 +482,12 @@
    "label": "Non Negative"
   }
  ],
+ "hide_toolbar": 1,
  "idx": 1,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-07-10 21:56:04.167745",
+ "modified": "2023-08-18 20:52:26.137852",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "DocField",

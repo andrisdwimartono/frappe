@@ -110,9 +110,10 @@
    "label": "Seen"
   }
  ],
+ "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-10-25 17:25:40.477044",
+ "modified": "2023-08-18 20:53:29.819231",
  "modified_by": "Administrator",
  "module": "Social",
  "name": "Energy Point Log",

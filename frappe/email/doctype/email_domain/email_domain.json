@@ -6,6 +6,7 @@
  "document_type": "Setup",
  "engine": "InnoDB",
  "field_order": [
+  "disabled",
   "email_settings",
   "domain_name",
   "email_id",
@@ -13,6 +14,7 @@
   "email_server",
   "use_imap",
   "use_ssl",
+  "use_starttls",
   "incoming_port",
   "attachment_limit",
   "append_to",
@@ -89,6 +91,7 @@
    "description": "e.g. smtp.gmail.com",
    "fieldname": "smtp_server",
    "fieldtype": "Data",
+   "in_standard_filter": 1,
    "label": "SMTP Server",
    "reqd": 1
   },
@@ -121,11 +124,25 @@
    "fieldname": "use_ssl_for_outgoing",
    "fieldtype": "Check",
    "label": "Use SSL for Outgoing"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.use_imap && !doc.use_ssl",
+   "fieldname": "use_starttls",
+   "fieldtype": "Check",
+   "label": "Use STARTTLS"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
+ "hide_toolbar": 1,
  "icon": "icon-inbox",
  "links": [],
- "modified": "2019-12-18 15:57:34.445308",
+ "modified": "2024-02-03 14:46:00.951004",
  "modified_by": "Administrator",
  "module": "Email",
  "name": "Email Domain",

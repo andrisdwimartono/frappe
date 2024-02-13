@@ -42,7 +42,8 @@
   "column_break_2",
   "color",
   "section_break_10",
-  "last_synced_on"
+  "last_synced_on",
+  "roles"
  ],
  "fields": [
   {
@@ -277,10 +278,17 @@
    "fieldtype": "Link",
    "label": "Parent Document Type",
    "options": "DocType"
+  },
+  {
+   "fieldname": "roles",
+   "fieldtype": "Table",
+   "label": "Roles",
+   "options": "Has Role"
   }
  ],
+ "hide_toolbar": 1,
  "links": [],
- "modified": "2021-11-09 17:18:11.456145",
+ "modified": "2023-08-18 20:52:46.544709",
  "modified_by": "Administrator",
  "module": "Desk",
  "name": "Dashboard Chart",
@@ -319,6 +327,17 @@
    "report": 1,
    "role": "All",
    "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Wakil Rektor 1",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",

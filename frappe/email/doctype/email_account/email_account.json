@@ -25,6 +25,7 @@
   "default_incoming",
   "use_imap",
   "use_ssl",
+  "use_starttls",
   "email_server",
   "incoming_port",
   "column_break_18",
@@ -75,6 +76,7 @@
    "hide_seconds": 1,
    "in_global_search": 1,
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Email Address",
    "options": "Email",
    "reqd": 1
@@ -133,8 +135,6 @@
    "fieldtype": "Link",
    "hide_days": 1,
    "hide_seconds": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Domain (optional)",
    "options": "Email Domain"
   },
@@ -210,7 +210,6 @@
    "fieldtype": "Link",
    "hide_days": 1,
    "hide_seconds": 1,
-   "in_standard_filter": 1,
    "label": "Append To",
    "options": "DocType"
   },
@@ -486,7 +485,8 @@
    "fieldtype": "Section Break",
    "hide_days": 1,
    "hide_seconds": 1,
-   "label": "Document Linking"
+   "label": "Document Linking",
+   "permlevel": 5
   },
   {
    "default": "0",
@@ -562,12 +562,21 @@
    "fieldname": "account_section",
    "fieldtype": "Section Break",
    "label": "Account"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:!doc.domain && doc.enable_incoming && doc.use_imap && !doc.use_ssl",
+   "fetch_from": "domain.use_starttls",
+   "fieldname": "use_starttls",
+   "fieldtype": "Check",
+   "label": "Use STARTTLS"
   }
  ],
+ "hide_toolbar": 1,
  "icon": "fa fa-inbox",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-22 11:09:15.603556",
+ "modified": "2024-02-03 14:48:44.847003",
  "modified_by": "Administrator",
  "module": "Email",
  "name": "Email Account",

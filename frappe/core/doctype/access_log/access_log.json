@@ -1,5 +1,6 @@
 {
- "autoname": "format:AL-{#####}",
+ "actions": [],
+ "autoname": "hash",
  "creation": "2019-07-25 15:44:44.955496",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -127,7 +128,9 @@
    "read_only": 1
   }
  ],
- "modified": "2019-08-05 19:00:13.839471",
+ "hide_toolbar": 1,
+ "links": [],
+ "modified": "2023-08-18 20:53:09.641416",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "Access Log",

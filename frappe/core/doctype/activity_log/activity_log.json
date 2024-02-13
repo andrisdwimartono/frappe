@@ -151,10 +151,11 @@
    "label": "Full Name"
   }
  ],
+ "hide_toolbar": 1,
  "icon": "fa fa-comment",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-10-25 11:43:57.504565",
+ "modified": "2023-08-18 20:53:30.677604",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "Activity Log",

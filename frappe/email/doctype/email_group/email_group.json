@@ -43,6 +43,7 @@
    "options": "Email Template"
   }
  ],
+ "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [
   {
@@ -51,7 +52,7 @@
    "link_fieldname": "email_group"
   }
  ],
- "modified": "2021-06-15 11:25:13.556201",
+ "modified": "2023-08-18 20:53:47.445324",
  "modified_by": "Administrator",
  "module": "Email",
  "name": "Email Group",

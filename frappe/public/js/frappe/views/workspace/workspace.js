@@ -18,15 +18,14 @@ frappe.views.Workspace = class Workspace {
 		this.wrapper = $(wrapper);
 		this.page = wrapper.page;
 		this.prepare_container();
-		this.show_or_hide_sidebar();
-		this.setup_dropdown();
+		// this.setup_dropdown();
 		this.pages = {};
 		this.sidebar_items = {};
 		this.sidebar_categories = [
 			"Modules",
-			"Domains",
-			"Places",
-			"Administration"
+			// "Domains",
+			// "Places",
+			// "Administration"
 		];
 
 		this.setup_workspaces();
@@ -137,7 +136,7 @@ frappe.views.Workspace = class Workspace {
 
 		this.pages[page] ? this.pages[page].show() : this.make_page(page);
 		this.current_page = this.pages[page];
-		this.setup_dropdown();
+		// this.setup_dropdown();
 	}
 
 	make_page(page) {
@@ -190,23 +189,6 @@ frappe.views.Workspace = class Workspace {
 		this.page.add_menu_item(__('Reset Customizations'), () => {
 			this.current_page.reset_customization();
 		}, 1);
-
-		this.page.add_menu_item(__('Toggle Sidebar'), () => {
-			this.toggle_side_bar();
-		}, 1);
-	}
-
-	toggle_side_bar() {
-		let show_workspace_sidebar = JSON.parse(localStorage.show_workspace_sidebar || "true");
-		show_workspace_sidebar = !show_workspace_sidebar;
-		localStorage.show_workspace_sidebar = show_workspace_sidebar;
-		this.show_or_hide_sidebar();
-		$(document.body).trigger("toggleDeskSidebar");
-	}
-
-	show_or_hide_sidebar() {
-		let show_workspace_sidebar = JSON.parse(localStorage.show_workspace_sidebar || "true");
-		$('#page-workspace .layout-side-section').toggleClass('hidden', !show_workspace_sidebar);
 	}
 };
 
